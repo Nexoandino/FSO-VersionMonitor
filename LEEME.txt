@@ -1,0 +1,29 @@
+MONITOR DE VERSIONES (ManageEngine / Site24x7) -> avisos a Zoho Cliq + panel web
+Creado por Jadir Segura - Technical Consultant FSO, ManageEngine
+
+ARCHIVOS
+  monitor.py      Todo el programa (revisa páginas, avisa a Cliq y genera el panel)
+  productos.json  Lista de páginas a vigilar (agrega o quita aquí)
+  .github/workflows/monitor.yml   Ejecución diaria automática en GitHub Actions (opcional)
+  Se crean solos: estado.json, historial.json, index.html
+
+PRIMERA VEZ (Mac)
+  cd ruta/a/version-monitor
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install requests beautifulsoup4
+
+USO
+  python monitor.py --probar     Solo prueba las páginas (no guarda ni envía nada)
+
+  read -s CLIQ_KEY               Pega tu webhook token de Cliq y Enter (no se muestra)
+  export CLIQ_WEBHOOK_URL="https://cliq.zoho.com/api/v2/channelsbyname/NOMBRE_UNICO_DEL_CANAL/message?zapikey=$CLIQ_KEY"
+  python monitor.py              Revisa, avisa a Cliq si hay versión nueva y actualiza el panel
+  open index.html                Abre el panel en el navegador
+
+NOTAS
+  - La primera ejecución solo guarda las versiones actuales (no envía avisos).
+  - Usa el mismo dominio de Cliq con el que entras (cliq.zoho.com / .eu / .in ...).
+  - Nunca escribas la clave dentro de monitor.py ni la subas a un repositorio.
+  - GitHub Actions: guarda la URL completa como secret con el nombre CLIQ_WEBHOOK_URL.
+  - Opcional: define PANEL_URL (enlace a tu panel) y se añade a cada aviso de Cliq. En GitHub Actions ya se calcula solo.

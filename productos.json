@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Applications Manager",
+    "url": "https://www.manageengine.com/products/applications_manager/release-notes.html"
+  },
+  {
+    "name": "OpManager 12.8",
+    "url": "https://www.manageengine.com/network-monitoring/help/read-me.html?releaseNotes"
+  },
+  {
+    "name": "OpManager Complete 12.9",
+    "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
+    "antes": "OpManager 12.9"
+  },
+  {
+    "name": "OpManager Nexus (FSO)",
+    "url": "https://www.manageengine.com/it-operations-management/read-me.html",
+    "antes": "OpManager Plus (ITOM)"
+  },
+  {
+    "name": "NetFlow Analyzer",
+    "url": "https://www.manageengine.com/products/netflow/readme.html"
+  },
+  {
+    "name": "Firewall Analyzer",
+    "url": "https://www.manageengine.com/products/firewall/readme.html"
+  },
+  {
+    "name": "Network Configuration Manager",
+    "url": "https://www.manageengine.com/network-configuration-manager/release-notes.html"
+  },
+  {
+    "name": "OpUtils",
+    "url": "https://www.manageengine.com/products/oputils/read-me.html"
+  },
+  {
+    "name": "DNS-DHCP-IPAM",
+    "url": "https://www.manageengine.com/dns-dhcp-ipam/readme.html"
+  },
+  {
+    "name": "Site24x7",
+    "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
+    "modo": "novedades"
+  }
+]
