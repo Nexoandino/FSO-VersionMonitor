@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monitor de versiones · FSO ManageEngine</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#151b28;--mut:#6b7385;--bd:#e5e8f0;--ok:#12a150;--warn:#d97706;--bad:#dc2626;--acc:#2f6bff;--sh:0 1px 2px rgba(16,24,40,.06),0 6px 18px rgba(16,24,40,.06)}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1020;--card:#141a2b;--tx:#e9edf7;--mut:#93a0b8;--bd:#232c44;--acc:#6f9bff;--sh:none}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:15px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding-bottom:env(safe-area-inset-bottom,0)}
+.hero{background:linear-gradient(135deg,#1e3a8a,#2f6bff 55%,#7c3aed);color:#fff;padding:calc(26px + env(safe-area-inset-top,0)) 16px 76px}
+.wrap{max-width:1040px;margin:0 auto}
+.hero .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+h1{font-size:28px;margin:4px 0 2px}.hero p{margin:0;opacity:.85}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 14px;border-radius:99px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:#cbd5e1}.dot.ok{background:#4ade80}.dot.bad{background:#f87171}
+main{max-width:1040px;margin:-52px auto 0;padding:0 16px 30px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;box-shadow:var(--sh);display:flex;gap:12px;align-items:center}
+.kpi .ic{font-size:24px;width:44px;height:44px;border-radius:12px;background:var(--bg);display:grid;place-items:center}
+.kpi b{display:block;font-size:24px;line-height:1.1}.kpi span{color:var(--mut);font-size:13px}
+h2{font-size:13px;margin:30px 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.bar input{flex:1;min-width:180px;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 13px;border-radius:99px;cursor:pointer;font:inherit;font-size:13px}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.pc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;box-shadow:var(--sh);border-top:3px solid var(--bd)}
+.pc.new{border-top-color:var(--acc)}
+.pt{display:flex;justify-content:space-between;gap:8px;align-items:center;font-weight:600}
+.pt a{color:var(--tx);text-decoration:none}.pt a:hover{color:var(--acc)}
+.v{font-size:28px;font-weight:700;margin:8px 0 6px;letter-spacing:-.02em}
+.lbl{font-size:12px;color:var(--mut);margin-top:8px}.snip{margin:2px 0 8px;font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--mut);font-size:12.5px;align-items:center}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--bd);color:var(--tx)}
+.badge.ok{background:var(--ok);color:#fff}.badge.bad{background:var(--bad);color:#fff}.badge.warn{background:#fef3c7;color:#92400e}.badge.new{background:var(--acc);color:#fff}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;box-shadow:var(--sh)}
+.strip{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px}
+.strip i{width:14px;height:28px;border-radius:4px;background:var(--ok)}.strip i.warn{background:#f59e0b}.strip i.bad{background:var(--bad)}
+.run{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd)}.run:last-child{border:0}
+.err{flex-basis:100%;color:var(--bad);font-size:13px;padding-left:4px}
+.tl{position:relative;margin-left:8px;padding-left:18px;border-left:2px solid var(--bd)}
+.tl .it{position:relative;padding:0 0 14px}.tl .it:last-child{padding:0}
+.tl .it:before{content:"";position:absolute;left:-25px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--acc);border:2px solid var(--card)}
+.tl small{display:block;color:var(--mut)}
+.empty{color:var(--mut);margin:4px 0}
+.creator{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2f6bff,#7c3aed);color:#fff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.creator b{font-size:17px;display:block}.creator span{color:var(--mut)}
+footer{text-align:center;color:var(--mut);font-size:12.5px;padding:8px 16px 24px}
+</style></head><body>
+<div class="hero"><div class="wrap">
+<div><div class="eyebrow">FSO · ManageEngine</div><h1>Monitor de versiones</h1><p id="sub"></p></div>
+<div class="pill" id="pill"></div></div></div>
+<main>
+<section class="kpis" id="kpis"></section>
+<h2>Últimas versiones</h2>
+<div class="bar"><input id="q" type="search" placeholder="Buscar producto..."><span id="chips"></span></div>
+<div class="grid" id="grid"></div>
+<h2>Verificaciones diarias</h2>
+<div class="card"><div class="strip" id="strip"></div><div id="runs"></div></div>
+<h2>Cambios recientes</h2>
+<div class="card" id="chg"></div>
+<h2>Creador</h2>
+<div class="card creator"><div class="av">JS</div>
+<div><b>Jadir Segura</b><span>Technical Consultant · FSO</span><br><span>ManageEngine</span></div></div>
+</main>
+<footer>Monitor de versiones · creado por Jadir Segura, Technical Consultant FSO, ManageEngine</footer>
+<script>
+const D = {"productos": {"Applications Manager": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "182500", "fecha": "September 26, 2026", "seguridad": true, "url": "https://www.manageengine.com/products/applications_manager/release-notes.html", "snippet": null, "modo": null}, "OpManager 12.8": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.8.712", "fecha": "September 23, 2026", "seguridad": true, "url": "https://www.manageengine.com/network-monitoring/help/read-me.html?releaseNotes", "snippet": null, "modo": null}, "OpManager Complete 12.9": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.9.148", "fecha": "September 25, 2026", "seguridad": false, "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html", "snippet": null, "modo": null}, "OpManager Nexus (FSO)": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.8.711", "fecha": "September 01, 2026", "seguridad": true, "url": "https://www.manageengine.com/it-operations-management/read-me.html", "snippet": null, "modo": null}, "NetFlow Analyzer": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.9.147", "fecha": "September 10, 2026", "seguridad": false, "url": "https://www.manageengine.com/products/netflow/readme.html", "snippet": null, "modo": null}, "Firewall Analyzer": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.9.118", "fecha": "July 20, 2026", "seguridad": true, "url": "https://www.manageengine.com/products/firewall/readme.html", "snippet": null, "modo": null}, "Network Configuration Manager": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.9.136", "fecha": "September 3, 2026", "seguridad": false, "url": "https://www.manageengine.com/network-configuration-manager/release-notes.html", "snippet": null, "modo": null}, "OpUtils": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "12.9.134", "fecha": "August 20, 2026", "seguridad": false, "url": "https://www.manageengine.com/products/oputils/read-me.html", "snippet": null, "modo": null}, "DNS-DHCP-IPAM": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "6500", "fecha": "September 17, 2026", "seguridad": true, "url": "https://www.manageengine.com/dns-dhcp-ipam/readme.html", "snippet": null, "modo": null}, "Site24x7": {"cambios": [], "detectado": "2026-09-30T00:04+00:00", "version": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon", "fecha": "September 29, 2026", "seguridad": false, "url": "https://www.site24x7.com/whats-new-in-site24x7.html", "snippet": "Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send monitor alerts to HaloITSM instantly without manual handoffs or delays using the HaloITSM integration .", "modo": "novedades"}}, "ejecuciones": [{"fecha": "2026-09-30T00:04+00:00", "ok": 10, "errores": 0, "avisos_fallidos": 0, "cambios": 0, "detalle": [{"nombre": "Applications Manager", "estado": "ok", "mensaje": "182500"}, {"nombre": "OpManager 12.8", "estado": "ok", "mensaje": "12.8.712"}, {"nombre": "OpManager Complete 12.9", "estado": "ok", "mensaje": "12.9.148"}, {"nombre": "OpManager Nexus (FSO)", "estado": "ok", "mensaje": "12.8.711"}, {"nombre": "NetFlow Analyzer", "estado": "ok", "mensaje": "12.9.147"}, {"nombre": "Firewall Analyzer", "estado": "ok", "mensaje": "12.9.118"}, {"nombre": "Network Configuration Manager", "estado": "ok", "mensaje": "12.9.136"}, {"nombre": "OpUtils", "estado": "ok", "mensaje": "12.9.134"}, {"nombre": "DNS-DHCP-IPAM", "estado": "ok", "mensaje": "6500"}, {"nombre": "Site24x7", "estado": "ok", "mensaje": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon"}]}]};
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x !== undefined) e.textContent = x; return e; };
+const $ = id => document.getElementById(id);
+const fmt = iso => iso ? new Date(iso).toLocaleString('es-CO', {dateStyle:'medium', timeStyle:'short'}) : '-';
+const dias = iso => (Date.now() - new Date(iso)) / 864e5;
+const runs = D.ejecuciones || [], prods = Object.entries(D.productos || {}), last = runs[0];
+const problemas = r => r.errores + (r.avisos_fallidos || 0);
+const esNuevo = p => (p.cambios || []).length > 0 && dias(p.cambios[0].detectado) < 7;
+prods.sort((a, b) => (b[1].detectado || '').localeCompare(a[1].detectado || ''));
+
+// Cabecera
+const dot = el('i', 'dot'); let txt = 'Sin ejecuciones';
+if (last) { txt = problemas(last) ? 'Última revisión con problemas' : 'Todo en orden'; dot.classList.add(problemas(last) ? 'bad' : 'ok'); }
+$('pill').append(dot, txt);
+$('sub').textContent = last ? 'Última revisión: ' + fmt(last.fecha) : 'Aún no hay datos';
+
+// KPIs
+const todos = prods.flatMap(([n, p]) => (p.cambios || []).map(c => ({n, ...c}))).sort((a, b) => b.detectado.localeCompare(a.detectado));
+const rec = runs.slice(0, 30), okRuns = rec.filter(r => !problemas(r)).length;
+[['📦', prods.length, 'Productos monitoreados'], ['🆕', todos.filter(c => dias(c.detectado) < 7).length, 'Cambios en 7 días'],
+ ['✅', rec.length ? Math.round(100 * okRuns / rec.length) + '%' : '-', 'Revisiones sin problemas'], ['🕒', runs.length, 'Revisiones registradas']]
+ .forEach(([i, v, l]) => { const k = el('div', 'kpi'), d = el('div'); d.append(el('b', '', v), el('span', '', l)); k.append(el('div', 'ic', i), d); $('kpis').append(k); });
+
+// Tarjetas con búsqueda y filtros
+let q = '', f = 'todos';
+function pintar() {
+  const g = $('grid'); g.replaceChildren();
+  const lista = prods.filter(([n, p]) => n.toLowerCase().includes(q) &&
+    (f === 'todos' || (f === 'nuevos' && esNuevo(p)) || (f === 'seguridad' && p.seguridad)));
+  lista.forEach(([n, p]) => {
+    const c = el('article', 'pc' + (esNuevo(p) ? ' new' : '')), h = el('div', 'pt'), a = el('a', '', n);
+    a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; h.append(a);
+    if (esNuevo(p)) h.append(el('span', 'badge new', 'nuevo'));
+    c.append(h);
+    if (p.modo === 'novedades') c.append(el('div', 'lbl', 'Última novedad'), el('div', 'snip', (p.snippet || '').slice(0, 120)));
+    else c.append(el('div', 'v', p.version));
+    const m = el('div', 'meta');
+    m.append(el('span', '', (p.modo === 'novedades' ? 'Fecha: ' : 'Publicada: ') + (p.fecha || '-')), el('span', '', 'Detectada: ' + fmt(p.detectado)));
+    if (p.seguridad) m.append(el('span', 'badge warn', '🔒 seguridad'));
+    c.append(m); g.append(c);
+  });
+  if (!lista.length) g.append(el('p', 'empty', 'Sin resultados'));
+}
+[['todos', 'Todos'], ['nuevos', 'Nuevos'], ['seguridad', 'Seguridad']].forEach(([k, l]) => {
+  const b = el('button', 'chip' + (k === f ? ' on' : ''), l); b.dataset.k = k;
+  b.onclick = () => { f = k; document.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x.dataset.k === k)); pintar(); };
+  $('chips').append(b, ' ');
+});
+$('q').oninput = e => { q = e.target.value.toLowerCase(); pintar(); };
+pintar();
+
+// Verificaciones diarias
+rec.slice().reverse().forEach(r => {
+  const i = el('i', problemas(r) ? (r.ok ? 'warn' : 'bad') : '');
+  i.title = fmt(r.fecha) + ' - ' + r.ok + ' ok, ' + problemas(r) + ' con problemas, ' + r.cambios + ' cambios'; $('strip').append(i);
+});
+runs.slice(0, 7).forEach(r => {
+  const d = el('div', 'run'); d.append(el('b', '', fmt(r.fecha)), el('span', 'badge ' + (problemas(r) ? 'bad' : 'ok'), problemas(r) ? problemas(r) + ' con problemas' : 'Sin problemas'),
+    el('span', 'badge', r.ok + ' páginas ok'));
+  if (r.cambios) d.append(el('span', 'badge new', r.cambios + ' cambio(s)'));
+  (r.detalle || []).filter(x => x.estado !== 'ok').forEach(x => d.append(el('div', 'err', x.nombre + ': ' + x.mensaje)));
+  $('runs').append(d);
+});
+if (!runs.length) $('runs').append(el('p', 'empty', 'Sin ejecuciones todavía'));
+
+// Cambios recientes
+if (todos.length) { const t = el('div', 'tl'); todos.slice(0, 15).forEach(c => {
+  const d = el('div', 'it'), b = el('b', '', c.n + '  '); d.append(b, el('span', '', c.de + ' → ' + c.a));
+  if (c.seguridad) d.append(' ', el('span', 'badge warn', '🔒 seguridad'));
+  d.append(el('small', '', 'Detectado ' + fmt(c.detectado) + (c.fecha ? ' · publicada ' + c.fecha : ''))); t.append(d); });
+  $('chg').append(t);
+} else $('chg').append(el('p', 'empty', 'Aún no se ha detectado ningún cambio desde que empezó el monitoreo.'));
+</script></body></html>
