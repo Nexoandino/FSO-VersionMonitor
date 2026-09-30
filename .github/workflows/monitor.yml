@@ -1,0 +1,31 @@
+name: Monitor de versiones
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC = 8:00 a.m. Colombia
+  workflow_dispatch:        # permite ejecutarlo manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4
+      - run: python monitor.py
+        env:
+          CLIQ_WEBHOOK_URL: ${{ secrets.CLIQ_WEBHOOK_URL }}
+          PANEL_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      - name: Guardar estado
+        if: always()
+        run: |
+          git config user.name "version-monitor"
+          git config user.email "bot@users.noreply.github.com"
+          git add estado.json historial.json index.html
+          git diff --cached --quiet || git commit -m "Actualiza versiones"
+          git push
