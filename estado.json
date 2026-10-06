@@ -1,12 +1,12 @@
 {
   "Applications Manager": "182500",
   "OpManager 12.8": "12.8.712",
-  "OpManager Complete 12.9": "12.9.148",
+  "OpManager Complete 12.9": "12.9.149",
   "OpManager Nexus (FSO)": "12.8.711",
-  "NetFlow Analyzer": "12.9.147",
+  "NetFlow Analyzer": "12.9.149",
   "Firewall Analyzer": "12.9.118",
   "Network Configuration Manager": "12.9.136",
-  "OpUtils": "12.9.134",
+  "OpUtils": "12.9.149",
   "DNS-DHCP-IPAM": "6500",
   "Site24x7": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon"
 }

@@ -21,11 +21,19 @@
       "modo": null
     },
     "OpManager Complete 12.9": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "12.9.148",
-      "fecha": "September 25, 2026",
-      "seguridad": false,
+      "cambios": [
+        {
+          "de": "12.9.148",
+          "a": "12.9.149",
+          "fecha": "October 6, 2026",
+          "detectado": "2026-10-06T13:15+00:00",
+          "seguridad": true
+        }
+      ],
+      "detectado": "2026-10-06T13:15+00:00",
+      "version": "12.9.149",
+      "fecha": "October 6, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
       "modo": null
@@ -41,10 +49,18 @@
       "modo": null
     },
     "NetFlow Analyzer": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "12.9.147",
-      "fecha": "September 10, 2026",
+      "cambios": [
+        {
+          "de": "12.9.147",
+          "a": "12.9.149",
+          "fecha": "October 6, 2026",
+          "detectado": "2026-10-06T13:15+00:00",
+          "seguridad": false
+        }
+      ],
+      "detectado": "2026-10-06T13:15+00:00",
+      "version": "12.9.149",
+      "fecha": "October 6, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/products/netflow/readme.html",
       "snippet": null,
@@ -71,10 +87,18 @@
       "modo": null
     },
     "OpUtils": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "12.9.134",
-      "fecha": "August 20, 2026",
+      "cambios": [
+        {
+          "de": "12.9.134",
+          "a": "12.9.149",
+          "fecha": "October 6, 2026",
+          "detectado": "2026-10-06T13:15+00:00",
+          "seguridad": false
+        }
+      ],
+      "detectado": "2026-10-06T13:15+00:00",
+      "version": "12.9.149",
+      "fecha": "October 6, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/products/oputils/read-me.html",
       "snippet": null,
@@ -102,6 +126,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-06T13:15+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 3,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182500"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.8.712"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.8.711"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.118"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.136"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-05T13:19+00:00",
       "ok": 10,
