@@ -115,17 +115,84 @@
       "modo": null
     },
     "Site24x7": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon",
-      "fecha": "September 29, 2026",
+      "cambios": [
+        {
+          "de": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon",
+          "a": "October 08, 2026 | AWS Monitor Amazon MemoryDB performance from one console Site24x7 now supports Amazon MemoryDB monit",
+          "fecha": "October 08, 2026",
+          "detectado": "2026-10-08T13:18+00:00",
+          "seguridad": false
+        }
+      ],
+      "detectado": "2026-10-08T13:18+00:00",
+      "version": "October 08, 2026 | AWS Monitor Amazon MemoryDB performance from one console Site24x7 now supports Amazon MemoryDB monit",
+      "fecha": "October 08, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send monitor alerts to HaloITSM instantly without manual handoffs or delays using the HaloITSM integration .",
+      "snippet": "AWS Monitor Amazon MemoryDB performance from one console Site24x7 now supports Amazon MemoryDB monitoring for clusters, shards, nodes, and Multi-Region clusters. Track performance, replication, cache ",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-08T13:18+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182500"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.8.712"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.8.711"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.118"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.136"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 08, 2026 | AWS Monitor Amazon MemoryDB performance from one console Site24x7 now supports Amazon MemoryDB monit"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-07T13:18+00:00",
       "ok": 10,
