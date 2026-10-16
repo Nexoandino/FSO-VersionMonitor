@@ -3,6 +3,13 @@
     "Applications Manager": {
       "cambios": [
         {
+          "de": "182600",
+          "a": "182700",
+          "fecha": "October 15, 2026",
+          "detectado": "2026-10-16T13:35+00:00",
+          "seguridad": true
+        },
+        {
           "de": "182500",
           "a": "182600",
           "fecha": "October 7, 2026",
@@ -10,10 +17,10 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-09T13:17+00:00",
-      "version": "182600",
-      "fecha": "October 7, 2026",
-      "seguridad": false,
+      "detectado": "2026-10-16T13:35+00:00",
+      "version": "182700",
+      "fecha": "October 15, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/products/applications_manager/release-notes.html",
       "snippet": null,
       "modo": null
@@ -165,6 +172,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-16T13:35+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182700"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.118"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.136"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.149"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-15T13:37+00:00",
       "ok": 10,
