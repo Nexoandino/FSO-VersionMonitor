@@ -46,6 +46,13 @@
     "OpManager Complete 12.9": {
       "cambios": [
         {
+          "de": "12.9.150",
+          "a": "12.9.200",
+          "fecha": "October 21, 2026",
+          "detectado": "2026-10-22T13:39+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.9.149",
           "a": "12.9.150",
           "fecha": "October 20, 2026",
@@ -60,9 +67,9 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-20T13:35+00:00",
-      "version": "12.9.150",
-      "fecha": "October 20, 2026",
+      "detectado": "2026-10-22T13:39+00:00",
+      "version": "12.9.200",
+      "fecha": "October 21, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
@@ -89,6 +96,13 @@
     "NetFlow Analyzer": {
       "cambios": [
         {
+          "de": "12.9.149",
+          "a": "12.9.200",
+          "fecha": "October 21, 2026",
+          "detectado": "2026-10-22T13:39+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.9.147",
           "a": "12.9.149",
           "fecha": "October 6, 2026",
@@ -96,10 +110,10 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-06T13:15+00:00",
-      "version": "12.9.149",
-      "fecha": "October 6, 2026",
-      "seguridad": false,
+      "detectado": "2026-10-22T13:39+00:00",
+      "version": "12.9.200",
+      "fecha": "October 21, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/products/netflow/readme.html",
       "snippet": null,
       "modo": null
@@ -115,10 +129,18 @@
       "modo": null
     },
     "Network Configuration Manager": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "12.9.136",
-      "fecha": "September 3, 2026",
+      "cambios": [
+        {
+          "de": "12.9.136",
+          "a": "12.9.200",
+          "fecha": "October 21, 2026",
+          "detectado": "2026-10-22T13:39+00:00",
+          "seguridad": false
+        }
+      ],
+      "detectado": "2026-10-22T13:39+00:00",
+      "version": "12.9.200",
+      "fecha": "October 21, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/network-configuration-manager/release-notes.html",
       "snippet": null,
@@ -127,6 +149,13 @@
     "OpUtils": {
       "cambios": [
         {
+          "de": "12.9.149",
+          "a": "12.9.200",
+          "fecha": "October 21, 2026",
+          "detectado": "2026-10-22T13:39+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.134",
           "a": "12.9.149",
           "fecha": "October 6, 2026",
@@ -134,9 +163,9 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-06T13:15+00:00",
-      "version": "12.9.149",
-      "fecha": "October 6, 2026",
+      "detectado": "2026-10-22T13:39+00:00",
+      "version": "12.9.200",
+      "fecha": "October 21, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/products/oputils/read-me.html",
       "snippet": null,
@@ -179,6 +208,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-22T13:39+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 4,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182700"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.118"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-21T13:35+00:00",
       "ok": 10,
