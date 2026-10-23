@@ -46,6 +46,13 @@
     "OpManager Complete 12.9": {
       "cambios": [
         {
+          "de": "12.9.200",
+          "a": "12.9.201",
+          "fecha": "October 23, 2026",
+          "detectado": "2026-10-23T17:45+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.150",
           "a": "12.9.200",
           "fecha": "October 21, 2026",
@@ -67,10 +74,10 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-22T13:39+00:00",
-      "version": "12.9.200",
-      "fecha": "October 21, 2026",
-      "seguridad": true,
+      "detectado": "2026-10-23T17:45+00:00",
+      "version": "12.9.201",
+      "fecha": "October 23, 2026",
+      "seguridad": false,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
       "modo": null
@@ -96,6 +103,13 @@
     "NetFlow Analyzer": {
       "cambios": [
         {
+          "de": "12.9.200",
+          "a": "12.9.201",
+          "fecha": "October 23, 2026",
+          "detectado": "2026-10-23T17:45+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.149",
           "a": "12.9.200",
           "fecha": "October 21, 2026",
@@ -110,19 +124,27 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-22T13:39+00:00",
-      "version": "12.9.200",
-      "fecha": "October 21, 2026",
-      "seguridad": true,
+      "detectado": "2026-10-23T17:45+00:00",
+      "version": "12.9.201",
+      "fecha": "October 23, 2026",
+      "seguridad": false,
       "url": "https://www.manageengine.com/products/netflow/readme.html",
       "snippet": null,
       "modo": null
     },
     "Firewall Analyzer": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "12.9.118",
-      "fecha": "July 20, 2026",
+      "cambios": [
+        {
+          "de": "12.9.118",
+          "a": "12.9.201",
+          "fecha": "October 23, 2026",
+          "detectado": "2026-10-23T17:45+00:00",
+          "seguridad": true
+        }
+      ],
+      "detectado": "2026-10-23T17:45+00:00",
+      "version": "12.9.201",
+      "fecha": "October 23, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/products/firewall/readme.html",
       "snippet": null,
@@ -184,6 +206,13 @@
     "Site24x7": {
       "cambios": [
         {
+          "de": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate",
+          "a": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov",
+          "fecha": "October 22, 2026",
+          "detectado": "2026-10-23T17:45+00:00",
+          "seguridad": false
+        },
+        {
           "de": "October 08, 2026 | AWS Monitor Amazon MemoryDB performance from one console Site24x7 now supports Amazon MemoryDB monit",
           "a": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate",
           "fecha": "October 12, 2026",
@@ -198,16 +227,75 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-13T13:22+00:00",
-      "version": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate",
-      "fecha": "October 12, 2026",
+      "detectado": "2026-10-23T17:45+00:00",
+      "version": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov",
+      "fecha": "October 22, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlated events , explore probable root causes, and check affected monitors with the Event Correlation Prob",
+      "snippet": "Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS over HTTPS (DoH) . Validate the availability and performance of DoH-enabled DNS services while protect",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-23T17:45+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 4,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182700"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-22T13:39+00:00",
       "ok": 10,

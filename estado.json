@@ -1,12 +1,12 @@
 {
   "Applications Manager": "182700",
   "OpManager 12.8": "12.9.110",
-  "OpManager Complete 12.9": "12.9.200",
+  "OpManager Complete 12.9": "12.9.201",
   "OpManager Nexus (FSO)": "12.9.110",
-  "NetFlow Analyzer": "12.9.200",
-  "Firewall Analyzer": "12.9.118",
+  "NetFlow Analyzer": "12.9.201",
+  "Firewall Analyzer": "12.9.201",
   "Network Configuration Manager": "12.9.200",
   "OpUtils": "12.9.200",
   "DNS-DHCP-IPAM": "6500",
-  "Site24x7": "October 12, 2026 | Mobile Apps Manage events on the go with Event Correlation in the Site24x7 mobile app View correlate"
+  "Site24x7": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov"
 }
