@@ -3,6 +3,13 @@
     "Applications Manager": {
       "cambios": [
         {
+          "de": "182700",
+          "a": "182800",
+          "fecha": "October 23, 2026",
+          "detectado": "2026-10-27T18:35+00:00",
+          "seguridad": true
+        },
+        {
           "de": "182600",
           "a": "182700",
           "fecha": "October 15, 2026",
@@ -17,9 +24,9 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-16T13:35+00:00",
-      "version": "182700",
-      "fecha": "October 15, 2026",
+      "detectado": "2026-10-27T18:35+00:00",
+      "version": "182800",
+      "fecha": "October 23, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/products/applications_manager/release-notes.html",
       "snippet": null,
@@ -237,6 +244,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-27T18:35+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182800"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.201"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.200"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-26T19:03+00:00",
       "ok": 10,
