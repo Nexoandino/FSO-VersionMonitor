@@ -53,6 +53,13 @@
     "OpManager Complete 12.9": {
       "cambios": [
         {
+          "de": "12.9.201",
+          "a": "12.9.202",
+          "fecha": "October 30, 2026",
+          "detectado": "2026-10-30T18:26+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.200",
           "a": "12.9.201",
           "fecha": "October 23, 2026",
@@ -81,9 +88,9 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-23T17:45+00:00",
-      "version": "12.9.201",
-      "fecha": "October 23, 2026",
+      "detectado": "2026-10-30T18:26+00:00",
+      "version": "12.9.202",
+      "fecha": "October 30, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
@@ -110,6 +117,13 @@
     "NetFlow Analyzer": {
       "cambios": [
         {
+          "de": "12.9.201",
+          "a": "12.9.202",
+          "fecha": "October 30, 2026",
+          "detectado": "2026-10-30T18:26+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.200",
           "a": "12.9.201",
           "fecha": "October 23, 2026",
@@ -131,9 +145,9 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-23T17:45+00:00",
-      "version": "12.9.201",
-      "fecha": "October 23, 2026",
+      "detectado": "2026-10-30T18:26+00:00",
+      "version": "12.9.202",
+      "fecha": "October 30, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/products/netflow/readme.html",
       "snippet": null,
@@ -142,6 +156,13 @@
     "Firewall Analyzer": {
       "cambios": [
         {
+          "de": "12.9.201",
+          "a": "12.9.202",
+          "fecha": "October 30, 2026",
+          "detectado": "2026-10-30T18:26+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.118",
           "a": "12.9.201",
           "fecha": "October 23, 2026",
@@ -149,16 +170,23 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-23T17:45+00:00",
-      "version": "12.9.201",
-      "fecha": "October 23, 2026",
-      "seguridad": true,
+      "detectado": "2026-10-30T18:26+00:00",
+      "version": "12.9.202",
+      "fecha": "October 30, 2026",
+      "seguridad": false,
       "url": "https://www.manageengine.com/products/firewall/readme.html",
       "snippet": null,
       "modo": null
     },
     "Network Configuration Manager": {
       "cambios": [
+        {
+          "de": "12.9.200",
+          "a": "12.9.202",
+          "fecha": "October 30, 2026",
+          "detectado": "2026-10-30T18:26+00:00",
+          "seguridad": false
+        },
         {
           "de": "12.9.136",
           "a": "12.9.200",
@@ -167,9 +195,9 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-22T13:39+00:00",
-      "version": "12.9.200",
-      "fecha": "October 21, 2026",
+      "detectado": "2026-10-30T18:26+00:00",
+      "version": "12.9.202",
+      "fecha": "October 30, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/network-configuration-manager/release-notes.html",
       "snippet": null,
@@ -177,6 +205,13 @@
     },
     "OpUtils": {
       "cambios": [
+        {
+          "de": "12.9.200",
+          "a": "12.9.202",
+          "fecha": "October 30, 2026",
+          "detectado": "2026-10-30T18:26+00:00",
+          "seguridad": false
+        },
         {
           "de": "12.9.149",
           "a": "12.9.200",
@@ -192,9 +227,9 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-22T13:39+00:00",
-      "version": "12.9.200",
-      "fecha": "October 21, 2026",
+      "detectado": "2026-10-30T18:26+00:00",
+      "version": "12.9.202",
+      "fecha": "October 30, 2026",
       "seguridad": false,
       "url": "https://www.manageengine.com/products/oputils/read-me.html",
       "snippet": null,
@@ -244,6 +279,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-10-30T18:26+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 5,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182800"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov"
+        }
+      ]
+    },
     {
       "fecha": "2026-10-29T18:50+00:00",
       "ok": 10,

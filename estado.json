@@ -1,12 +1,12 @@
 {
   "Applications Manager": "182800",
   "OpManager 12.8": "12.9.110",
-  "OpManager Complete 12.9": "12.9.201",
+  "OpManager Complete 12.9": "12.9.202",
   "OpManager Nexus (FSO)": "12.9.110",
-  "NetFlow Analyzer": "12.9.201",
-  "Firewall Analyzer": "12.9.201",
-  "Network Configuration Manager": "12.9.200",
-  "OpUtils": "12.9.200",
+  "NetFlow Analyzer": "12.9.202",
+  "Firewall Analyzer": "12.9.202",
+  "Network Configuration Manager": "12.9.202",
+  "OpUtils": "12.9.202",
   "DNS-DHCP-IPAM": "6500",
   "Site24x7": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov"
 }
