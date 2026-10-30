@@ -1,0 +1,8 @@
+# Tráfico normal constante, lunes a viernes 8am-6pm, cada 5 min, categoría al azar
+*/5 8-17 * * 1-5   /root/traffic-lab.sh mixed
+
+# Pico "malicioso" a la 1:00 am (dura ~15 min internamente)
+0 1 * * *          /root/traffic-lab.sh suspicious
+
+# Pico "malicioso" a las 3:00 am
+0 3 * * *          /root/traffic-lab.sh suspicious
