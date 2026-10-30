@@ -1,0 +1,97 @@
+#!/bin/bash
+# Uso: traffic-lab.sh {social|business|leisure|ping|mixed|suspicious}
+
+LOG="/tmp/traffic-lab.log"
+
+# --- Destinos por categoria (ajusta IPs internas si tu lab no tiene salida a Internet) ---
+SOCIAL="facebook.com instagram.com twitter.com linkedin.com tiktok.com"
+BUSINESS="outlook.office.com teams.microsoft.com zoom.us slack.com salesforce.com"
+LEISURE="youtube.com netflix.com spotify.com twitch.tv"
+
+# IP interna de tu lab para pruebas ICMP/puertos (cambiala por un nodo real)
+LAB_TARGET="192.168.10.20"
+
+log() { echo "$(date '+%F %T') $*" >> "$LOG"; }
+
+# ---------- TRAFICO NORMAL ----------
+social() {
+  for d in $SOCIAL; do
+    curl -s -L --max-time 8 "https://$d/" -o /dev/null
+    sleep 1
+  done
+  log "social -> $SOCIAL"
+}
+
+business() {
+  for d in $BUSINESS; do
+    curl -s -L --max-time 8 "https://$d/" -o /dev/null
+    sleep 1
+  done
+  log "business -> $BUSINESS"
+}
+
+leisure() {
+  for d in $LEISURE; do
+    curl -s -L --max-time 8 "https://$d/" -o /dev/null
+    sleep 1
+  done
+  log "leisure -> $LEISURE"
+}
+
+ping_test() {
+  ping -c 4 -W 2 "$LAB_TARGET" >> "$LOG" 2>&1
+  dig example.com +short >> "$LOG" 2>&1
+  log "ping+dns -> $LAB_TARGET"
+}
+
+# Elige una categoria al azar (da variedad a lo largo del dia)
+mixed() {
+  n=$(( RANDOM % 4 ))
+  case $n in
+    0) social ;;
+    1) business ;;
+    2) leisure ;;
+    3) ping_test ;;
+  esac
+}
+
+# ---------- TRAFICO "SOSPECHOSO" (patrones, no explotacion real) ----------
+# Simula formas que suelen marcarse como anomalas en NetFlow: barrido de puertos,
+# muchas conexiones cortas repetidas (beaconing) y rafagas de consultas DNS.
+# Apunta SOLO a equipos dentro de tu propio laboratorio.
+suspicious() {
+  log "=== inicio pico sospechoso ==="
+  end=$(( $(date +%s) + 900 ))   # dura ~15 minutos
+  while [ "$(date +%s)" -lt "$end" ]; do
+
+    # "Escaneo de puertos" simple contra tu propio nodo de lab
+    for p in 21 22 23 25 80 443 3389 8080; do
+      nc -z -w1 "$LAB_TARGET" "$p" >> "$LOG" 2>&1
+    done
+
+    # Conexiones cortas y repetidas (patron tipo beaconing)
+    for i in $(seq 1 10); do
+      nc -z -w1 "$LAB_TARGET" 443 >> "$LOG" 2>&1
+      sleep 0.3
+    done
+
+    # Rafaga de consultas DNS a subdominios aleatorios (patron tipo exfiltracion)
+    for i in $(seq 1 15); do
+      r=$RANDOM
+      dig "host$r.example.com" +short >> "$LOG" 2>&1
+    done
+
+    sleep 5
+  done
+  log "=== fin pico sospechoso ==="
+}
+
+case "$1" in
+  social)     social ;;
+  business)   business ;;
+  leisure)    leisure ;;
+  ping)       ping_test ;;
+  mixed)      mixed ;;
+  suspicious) suspicious ;;
+  *) echo "Uso: $0 {social|business|leisure|ping|mixed|suspicious}" ;;
+esac
