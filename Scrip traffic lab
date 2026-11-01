@@ -9,7 +9,7 @@ BUSINESS="outlook.office.com teams.microsoft.com zoom.us slack.com salesforce.co
 LEISURE="youtube.com netflix.com spotify.com twitch.tv"
 
 # IP interna de tu lab para pruebas ICMP/puertos (cambiala por un nodo real)
-LAB_TARGET="192.168.10.20"
+LAB_TARGET="192.168.15.107"
 
 log() { echo "$(date '+%F %T') $*" >> "$LOG"; }
 
@@ -44,15 +44,61 @@ ping_test() {
   log "ping+dns -> $LAB_TARGET"
 }
 
+download() {
+  curl -s -L --max-time 60 "https://speed.cloudflare.com/__down?bytes=10000000" -o /dev/null
+  log "download 10MB"
+}
+
+intense() {
+  log "=== inicio trafico intensificado (20:00+) ==="
+  for i in 1 2 3; do
+    social
+    business
+    leisure
+    ping_test
+  done
+  if command -v iperf3 >/dev/null 2>&1; then
+    iperf3 -c "$LAB_TARGET" -t 20 >> "$LOG" 2>&1
+  fi
+  download
+  log "=== fin trafico intensificado ==="
+}
+
+multicast() {
+  MCAST_GROUP="239.1.1.1"
+  MCAST_PORT=5007
+  if command -v python3 >/dev/null 2>&1; then
+    python3 - <<PYEOF >> "$LOG" 2>&1
+import socket, time
+group = "$MCAST_GROUP"
+port = $MCAST_PORT
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 32)
+for i in range(20):
+    sock.sendto(f"multicast-test-{i}".encode(), (group, port))
+    time.sleep(1)
+print("multicast burst sent")
+PYEOF
+    log "multicast -> $MCAST_GROUP:$MCAST_PORT"
+  else
+    log "python3 no instalado, omitiendo multicast"
+  fi
+}
 # Elige una categoria al azar (da variedad a lo largo del dia)
 mixed() {
   n=$(( RANDOM % 4 ))
-  case $n in
-    0) social ;;
-    1) business ;;
-    2) leisure ;;
-    3) ping_test ;;
-  esac
+  case "$1" in
+  social)     social ;;
+  business)   business ;;
+  leisure)    leisure ;;
+  ping)       ping_test ;;
+  mixed)      mixed ;;
+  suspicious) suspicious ;;
+  intense)    intense ;;
+  multicast)  multicast ;;
+  download)   download ;;
+  *) echo "Uso: $0 {social|business|leisure|ping|mixed|suspicious|intense|multicast|download}" ;;
+esac
 }
 
 # ---------- TRAFICO "SOSPECHOSO" (patrones, no explotacion real) ----------
