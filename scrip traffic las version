@@ -1,0 +1,130 @@
+#!/bin/bash
+# Uso: traffic-lab.sh {social|business|leisure|ping|download|mixed|intense|multicast|suspicious}
+# Genera trafico de prueba para alimentar NetFlow/OpManager en el laboratorio.
+
+LOG="/tmp/traffic-lab.log"
+LOCK="/tmp/traffic-lab.lock"
+LAB_TARGET="192.168.15.107"          # nodo real de tu lab (ICMP, puertos, iperf3)
+SUSPICIOUS_SECONDS="${SUSPICIOUS_SECONDS:-900}"
+
+SOCIAL=(facebook.com instagram.com twitter.com linkedin.com tiktok.com)
+BUSINESS=(outlook.office.com teams.microsoft.com zoom.us slack.com salesforce.com)
+LEISURE=(youtube.com netflix.com spotify.com twitch.tv)
+
+log() { echo "$(date '+%F %T') $*" >> "$LOG"; }
+
+# Seguridad: el trafico "sospechoso" solo puede apuntar a IP privadas
+case "$LAB_TARGET" in
+  10.*|192.168.*|172.1[6-9].*|172.2[0-9].*|172.3[01].*) ;;
+  *) echo "LAB_TARGET ($LAB_TARGET) debe ser una IP privada del laboratorio"; exit 1 ;;
+esac
+
+# Dependencias
+for c in curl ping dig nc; do
+  command -v "$c" >/dev/null 2>&1 || echo "Aviso: falta '$c' (algunas pruebas no funcionaran)" >&2
+done
+
+# Evita que el log crezca sin limite (5 MB)
+if [ -f "$LOG" ] && [ "$(stat -c %s "$LOG")" -gt 5242880 ]; then : > "$LOG"; fi
+
+# ---------- TRAFICO NORMAL ----------
+browse() {                       # browse <categoria> <dominio>...
+  local cat="$1"; shift
+  for d in "$@"; do
+    curl -s -L --max-time 8 "https://$d/" -o /dev/null
+    sleep 1
+  done
+  log "$cat -> $*"
+}
+social()   { browse social   "${SOCIAL[@]}"; }
+business() { browse business "${BUSINESS[@]}"; }
+leisure()  { browse leisure  "${LEISURE[@]}"; }
+
+ping_test() {
+  ping -c 4 -W 2 "$LAB_TARGET" >> "$LOG" 2>&1
+  dig example.com +short >> "$LOG" 2>&1
+  log "ping+dns -> $LAB_TARGET"
+}
+
+download() {
+  curl -s -L --max-time 60 "https://speed.cloudflare.com/__down?bytes=10000000" -o /dev/null
+  log "download 10MB"
+}
+
+intense() {
+  log "=== inicio trafico intensificado ==="
+  for _ in 1 2 3; do
+    social; business; leisure; ping_test
+  done
+  # Requiere "iperf3 -s" corriendo en LAB_TARGET
+  if command -v iperf3 >/dev/null 2>&1; then
+    iperf3 -c "$LAB_TARGET" -t 20 >> "$LOG" 2>&1
+  fi
+  download
+  log "=== fin trafico intensificado ==="
+}
+
+multicast() {
+  local group="239.1.1.1" port=5007
+  if ! command -v python3 >/dev/null 2>&1; then
+    log "python3 no instalado, omitiendo multicast"; return
+  fi
+  python3 - "$group" "$port" <<'PYEOF' >> "$LOG" 2>&1
+import socket, sys, time
+group, port = sys.argv[1], int(sys.argv[2])
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+s.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 32)
+for i in range(20):
+    s.sendto(f"multicast-test-{i}".encode(), (group, port))
+    time.sleep(1)
+print("multicast burst sent")
+PYEOF
+  log "multicast -> $group:$port"
+}
+
+# Elige una categoria al azar (variedad a lo largo del dia)
+mixed() {
+  local opts=(social business leisure ping_test download)
+  local pick="${opts[RANDOM % ${#opts[@]}]}"
+  log "mixed -> $pick"
+  "$pick"
+}
+
+# ---------- TRAFICO "SOSPECHOSO" (patrones, no explotacion real) ----------
+# Barrido de puertos, conexiones cortas repetidas (beaconing) y rafagas DNS.
+# Solo contra LAB_TARGET (IP privada, validada arriba).
+suspicious() {
+  log "=== inicio pico sospechoso (${SUSPICIOUS_SECONDS}s) ==="
+  local end=$(( $(date +%s) + SUSPICIOUS_SECONDS ))
+  while [ "$(date +%s)" -lt "$end" ]; do
+    for p in 21 22 23 25 80 443 3389 8080; do
+      nc -z -w1 "$LAB_TARGET" "$p" >> "$LOG" 2>&1
+    done
+    for _ in $(seq 1 10); do
+      nc -z -w1 "$LAB_TARGET" 443 >> "$LOG" 2>&1
+      sleep 0.3
+    done
+    for _ in $(seq 1 15); do
+      dig "host$RANDOM.example.com" +short >> "$LOG" 2>&1
+    done
+    sleep 5
+  done
+  log "=== fin pico sospechoso ==="
+}
+
+# Una sola ejecucion a la vez (evita que cron las solape)
+exec 9>"$LOCK"
+if ! flock -n 9; then echo "Ya hay una ejecucion en curso"; exit 1; fi
+
+case "$1" in
+  social)     social ;;
+  business)   business ;;
+  leisure)    leisure ;;
+  ping)       ping_test ;;
+  download)   download ;;
+  mixed)      mixed ;;
+  intense)    intense ;;
+  multicast)  multicast ;;
+  suspicious) suspicious ;;
+  *) echo "Uso: $0 {social|business|leisure|ping|download|mixed|intense|multicast|suspicious}" ;;
+esac
