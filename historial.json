@@ -3,6 +3,13 @@
     "Applications Manager": {
       "cambios": [
         {
+          "de": "182800",
+          "a": "182900",
+          "fecha": "November 3, 2026",
+          "detectado": "2026-11-04T20:19+00:00",
+          "seguridad": false
+        },
+        {
           "de": "182700",
           "a": "182800",
           "fecha": "October 23, 2026",
@@ -24,10 +31,10 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-27T18:35+00:00",
-      "version": "182800",
-      "fecha": "October 23, 2026",
-      "seguridad": true,
+      "detectado": "2026-11-04T20:19+00:00",
+      "version": "182900",
+      "fecha": "November 3, 2026",
+      "seguridad": false,
       "url": "https://www.manageengine.com/products/applications_manager/release-notes.html",
       "snippet": null,
       "modo": null
@@ -286,6 +293,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-04T20:19+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182900"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.202"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 03, 2026 | OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hos"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-03T19:59+00:00",
       "ok": 10,
