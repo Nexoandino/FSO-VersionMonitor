@@ -60,6 +60,13 @@
     "OpManager Complete 12.9": {
       "cambios": [
         {
+          "de": "12.9.202",
+          "a": "12.9.203",
+          "fecha": "November 5, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.9.201",
           "a": "12.9.202",
           "fecha": "October 30, 2026",
@@ -95,10 +102,10 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-30T18:26+00:00",
-      "version": "12.9.202",
-      "fecha": "October 30, 2026",
-      "seguridad": false,
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "12.9.203",
+      "fecha": "November 5, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
       "modo": null
@@ -123,6 +130,13 @@
     },
     "NetFlow Analyzer": {
       "cambios": [
+        {
+          "de": "12.9.202",
+          "a": "12.9.203",
+          "fecha": "November 5, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": true
+        },
         {
           "de": "12.9.201",
           "a": "12.9.202",
@@ -152,16 +166,23 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-30T18:26+00:00",
-      "version": "12.9.202",
-      "fecha": "October 30, 2026",
-      "seguridad": false,
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "12.9.203",
+      "fecha": "November 5, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/products/netflow/readme.html",
       "snippet": null,
       "modo": null
     },
     "Firewall Analyzer": {
       "cambios": [
+        {
+          "de": "12.9.202",
+          "a": "12.9.203",
+          "fecha": "November 5, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": true
+        },
         {
           "de": "12.9.201",
           "a": "12.9.202",
@@ -177,16 +198,23 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-30T18:26+00:00",
-      "version": "12.9.202",
-      "fecha": "October 30, 2026",
-      "seguridad": false,
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "12.9.203",
+      "fecha": "November 5, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/products/firewall/readme.html",
       "snippet": null,
       "modo": null
     },
     "Network Configuration Manager": {
       "cambios": [
+        {
+          "de": "12.9.202",
+          "a": "12.9.203",
+          "fecha": "November 5, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": true
+        },
         {
           "de": "12.9.200",
           "a": "12.9.202",
@@ -202,16 +230,23 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-30T18:26+00:00",
-      "version": "12.9.202",
-      "fecha": "October 30, 2026",
-      "seguridad": false,
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "12.9.203",
+      "fecha": "November 5, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/network-configuration-manager/release-notes.html",
       "snippet": null,
       "modo": null
     },
     "OpUtils": {
       "cambios": [
+        {
+          "de": "12.9.202",
+          "a": "12.9.203",
+          "fecha": "November 5, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": true
+        },
         {
           "de": "12.9.200",
           "a": "12.9.202",
@@ -234,10 +269,10 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-10-30T18:26+00:00",
-      "version": "12.9.202",
-      "fecha": "October 30, 2026",
-      "seguridad": false,
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "12.9.203",
+      "fecha": "November 5, 2026",
+      "seguridad": true,
       "url": "https://www.manageengine.com/products/oputils/read-me.html",
       "snippet": null,
       "modo": null
@@ -254,6 +289,13 @@
     },
     "Site24x7": {
       "cambios": [
+        {
+          "de": "November 03, 2026 | OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hos",
+          "a": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your ",
+          "fecha": "November 03, 2026",
+          "detectado": "2026-11-05T20:29+00:00",
+          "seguridad": false
+        },
         {
           "de": "October 22, 2026 | Internet Services Secure your DNS monitoring with DoH support The DNS Server monitor supports DNS ov",
           "a": "November 03, 2026 | OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hos",
@@ -283,16 +325,75 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-11-03T19:59+00:00",
-      "version": "November 03, 2026 | OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hos",
+      "detectado": "2026-11-05T20:29+00:00",
+      "version": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your ",
       "fecha": "November 03, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hosts with Site24x7 to track OCPU and memory capacity, resource utilization, and hosted instance perfor",
+      "snippet": "Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your Site24x7 monitor inventory and relationships with the HaloITSM CMDB to keep asset records up to date",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-05T20:29+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 6,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "182900"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your "
+        }
+      ]
+    },
     {
       "fecha": "2026-11-04T20:19+00:00",
       "ok": 10,

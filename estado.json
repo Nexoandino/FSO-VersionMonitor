@@ -1,12 +1,12 @@
 {
   "Applications Manager": "182900",
   "OpManager 12.8": "12.9.110",
-  "OpManager Complete 12.9": "12.9.202",
+  "OpManager Complete 12.9": "12.9.203",
   "OpManager Nexus (FSO)": "12.9.110",
-  "NetFlow Analyzer": "12.9.202",
-  "Firewall Analyzer": "12.9.202",
-  "Network Configuration Manager": "12.9.202",
-  "OpUtils": "12.9.202",
+  "NetFlow Analyzer": "12.9.203",
+  "Firewall Analyzer": "12.9.203",
+  "Network Configuration Manager": "12.9.203",
+  "OpUtils": "12.9.203",
   "DNS-DHCP-IPAM": "6500",
-  "Site24x7": "November 03, 2026 | OCI Gain visibility into OCI Dedicated VM Host capacity and performance Monitor OCI Dedicated VM Hos"
+  "Site24x7": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your "
 }
