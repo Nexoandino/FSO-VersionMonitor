@@ -1,5 +1,5 @@
 {
-  "Applications Manager": "182900",
+  "Applications Manager": "183000",
   "OpManager 12.8": "12.9.110",
   "OpManager Complete 12.9": "12.9.203",
   "OpManager Nexus (FSO)": "12.9.110",
@@ -8,5 +8,5 @@
   "Network Configuration Manager": "12.9.203",
   "OpUtils": "12.9.203",
   "DNS-DHCP-IPAM": "6500",
-  "Site24x7": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your "
+  "Site24x7": "November 13, 2026 | AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway"
 }
