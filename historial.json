@@ -297,6 +297,13 @@
     "Site24x7": {
       "cambios": [
         {
+          "de": "November 13, 2026 | AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway",
+          "a": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
+          "fecha": "November 16, 2026",
+          "detectado": "2026-11-17T21:33+00:00",
+          "seguridad": false
+        },
+        {
           "de": "November 03, 2026 | Third-Party Integrations Keep your HaloITSM CMDB up to date with automated inventory sync Sync your ",
           "a": "November 13, 2026 | AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway",
           "fecha": "November 13, 2026",
@@ -339,16 +346,75 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-11-16T22:46+00:00",
-      "version": "November 13, 2026 | AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway",
-      "fecha": "November 13, 2026",
+      "detectado": "2026-11-17T21:33+00:00",
+      "version": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
+      "fecha": "November 16, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway and Transit Gateway Attachment throughput with new bits-per-second and packet-per-second metrics. A",
+      "snippet": "Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive Reports for specific monitor groups or all monitor groups accessible to your account. Reports can b",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-17T21:33+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "183000"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-16T22:46+00:00",
       "ok": 10,
