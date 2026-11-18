@@ -67,6 +67,13 @@
     "OpManager Complete 12.9": {
       "cambios": [
         {
+          "de": "12.9.203",
+          "a": "12.9.204",
+          "fecha": "November 18, 2026",
+          "detectado": "2026-11-18T21:09+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.9.202",
           "a": "12.9.203",
           "fecha": "November 5, 2026",
@@ -109,9 +116,9 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-11-05T20:29+00:00",
-      "version": "12.9.203",
-      "fecha": "November 5, 2026",
+      "detectado": "2026-11-18T21:09+00:00",
+      "version": "12.9.204",
+      "fecha": "November 18, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me-complete.html",
       "snippet": null,
@@ -184,6 +191,13 @@
     "Firewall Analyzer": {
       "cambios": [
         {
+          "de": "12.9.203",
+          "a": "12.9.204",
+          "fecha": "November 17, 2026",
+          "detectado": "2026-11-18T21:09+00:00",
+          "seguridad": false
+        },
+        {
           "de": "12.9.202",
           "a": "12.9.203",
           "fecha": "November 5, 2026",
@@ -205,10 +219,10 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-11-05T20:29+00:00",
-      "version": "12.9.203",
-      "fecha": "November 5, 2026",
-      "seguridad": true,
+      "detectado": "2026-11-18T21:09+00:00",
+      "version": "12.9.204",
+      "fecha": "November 17, 2026",
+      "seguridad": false,
       "url": "https://www.manageengine.com/products/firewall/readme.html",
       "snippet": null,
       "modo": null
@@ -297,6 +311,13 @@
     "Site24x7": {
       "cambios": [
         {
+          "de": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
+          "a": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log",
+          "fecha": "November 17, 2026",
+          "detectado": "2026-11-18T21:09+00:00",
+          "seguridad": false
+        },
+        {
           "de": "November 13, 2026 | AWS Enhancement Monitor Transit Gateway traffic in bits and packets per second Track Transit Gateway",
           "a": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
           "fecha": "November 16, 2026",
@@ -346,16 +367,75 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-11-17T21:33+00:00",
-      "version": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
-      "fecha": "November 16, 2026",
+      "detectado": "2026-11-18T21:09+00:00",
+      "version": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log",
+      "fecha": "November 17, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive Reports for specific monitor groups or all monitor groups accessible to your account. Reports can b",
+      "snippet": "AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log differences faster with an AppLogs subquery . Apply separate conditions and aggregation functions i",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-18T21:09+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 3,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "183000"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6500"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-17T21:33+00:00",
       "ok": 10,
