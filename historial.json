@@ -299,10 +299,18 @@
       "modo": null
     },
     "DNS-DHCP-IPAM": {
-      "cambios": [],
-      "detectado": "2026-09-30T00:04+00:00",
-      "version": "6500",
-      "fecha": "September 17, 2026",
+      "cambios": [
+        {
+          "de": "6500",
+          "a": "6501",
+          "fecha": "November 19, 2026",
+          "detectado": "2026-11-19T21:13+00:00",
+          "seguridad": true
+        }
+      ],
+      "detectado": "2026-11-19T21:13+00:00",
+      "version": "6501",
+      "fecha": "November 19, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/dns-dhcp-ipam/readme.html",
       "snippet": null,
@@ -377,6 +385,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-19T21:13+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "183000"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.110"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6501"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-18T21:09+00:00",
       "ok": 10,
