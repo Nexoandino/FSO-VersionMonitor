@@ -49,6 +49,13 @@
     "OpManager 12.8": {
       "cambios": [
         {
+          "de": "12.9.110",
+          "a": "12.9.111",
+          "fecha": "November 20, 2026",
+          "detectado": "2026-11-20T15:45+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.8.712",
           "a": "12.9.110",
           "fecha": "October 15, 2026",
@@ -56,9 +63,9 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-15T13:37+00:00",
-      "version": "12.9.110",
-      "fecha": "October 15, 2026",
+      "detectado": "2026-11-20T15:45+00:00",
+      "version": "12.9.111",
+      "fecha": "November 20, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/network-monitoring/help/read-me.html?releaseNotes",
       "snippet": null,
@@ -127,6 +134,13 @@
     "OpManager Nexus (FSO)": {
       "cambios": [
         {
+          "de": "12.9.110",
+          "a": "12.9.111",
+          "fecha": "November 20, 2026",
+          "detectado": "2026-11-20T15:45+00:00",
+          "seguridad": true
+        },
+        {
           "de": "12.8.711",
           "a": "12.9.110",
           "fecha": "October 15, 2026",
@@ -134,9 +148,9 @@
           "seguridad": true
         }
       ],
-      "detectado": "2026-10-15T13:37+00:00",
-      "version": "12.9.110",
-      "fecha": "October 15, 2026",
+      "detectado": "2026-11-20T15:45+00:00",
+      "version": "12.9.111",
+      "fecha": "November 20, 2026",
       "seguridad": true,
       "url": "https://www.manageengine.com/it-operations-management/read-me.html",
       "snippet": null,
@@ -385,6 +399,65 @@
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-20T15:45+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 2,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "183000"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.111"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.111"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.204"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.203"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6501"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-19T21:13+00:00",
       "ok": 10,
