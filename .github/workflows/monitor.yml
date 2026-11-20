@@ -2,7 +2,7 @@ name: Monitor de versiones
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 8:00 a.m. Colombia
+    - cron: "7 13 * * *"   # 13:00 UTC = 8:00 a.m. Colombia
   workflow_dispatch:        # permite ejecutarlo manualmente
 
 permissions:
