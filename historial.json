@@ -375,6 +375,13 @@
     "Site24x7": {
       "cambios": [
         {
+          "de": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log",
+          "a": "November 25, 2026 | OCI Identify and resolve OCI configuration and optimization issues with new recommendations Strength",
+          "fecha": "November 25, 2026",
+          "detectado": "2026-11-25T22:25+00:00",
+          "seguridad": false
+        },
+        {
           "de": "November 16, 2026 | Platform Enhancement Schedule MG Executive Reports for multiple monitor groups Schedule MG Executive",
           "a": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log",
           "fecha": "November 17, 2026",
@@ -431,16 +438,75 @@
           "seguridad": false
         }
       ],
-      "detectado": "2026-11-18T21:09+00:00",
-      "version": "November 17, 2026 | AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log",
-      "fecha": "November 17, 2026",
+      "detectado": "2026-11-25T22:25+00:00",
+      "version": "November 25, 2026 | OCI Identify and resolve OCI configuration and optimization issues with new recommendations Strength",
+      "fecha": "November 25, 2026",
       "seguridad": false,
       "url": "https://www.site24x7.com/whats-new-in-site24x7.html",
-      "snippet": "AppLogs Enhancement Compare multiple log conditions side by side with a subquery in AppLogs Spot log differences faster with an AppLogs subquery . Apply separate conditions and aggregation functions i",
+      "snippet": "OCI Identify and resolve OCI configuration and optimization issues with new recommendations Strengthen your OCI environment with new recommendations for File Storage, Certificates, Certificate Authori",
       "modo": "novedades"
     }
   },
   "ejecuciones": [
+    {
+      "fecha": "2026-11-25T22:25+00:00",
+      "ok": 10,
+      "errores": 0,
+      "avisos_fallidos": 0,
+      "cambios": 1,
+      "detalle": [
+        {
+          "nombre": "Applications Manager",
+          "estado": "ok",
+          "mensaje": "183001"
+        },
+        {
+          "nombre": "OpManager 12.8",
+          "estado": "ok",
+          "mensaje": "12.9.111"
+        },
+        {
+          "nombre": "OpManager Complete 12.9",
+          "estado": "ok",
+          "mensaje": "12.9.205"
+        },
+        {
+          "nombre": "OpManager Nexus (FSO)",
+          "estado": "ok",
+          "mensaje": "12.9.111"
+        },
+        {
+          "nombre": "NetFlow Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.205"
+        },
+        {
+          "nombre": "Firewall Analyzer",
+          "estado": "ok",
+          "mensaje": "12.9.205"
+        },
+        {
+          "nombre": "Network Configuration Manager",
+          "estado": "ok",
+          "mensaje": "12.9.205"
+        },
+        {
+          "nombre": "OpUtils",
+          "estado": "ok",
+          "mensaje": "12.9.205"
+        },
+        {
+          "nombre": "DNS-DHCP-IPAM",
+          "estado": "ok",
+          "mensaje": "6501"
+        },
+        {
+          "nombre": "Site24x7",
+          "estado": "ok",
+          "mensaje": "November 25, 2026 | OCI Identify and resolve OCI configuration and optimization issues with new recommendations Strength"
+        }
+      ]
+    },
     {
       "fecha": "2026-11-24T22:59+00:00",
       "ok": 10,
@@ -3865,65 +3931,6 @@
     },
     {
       "fecha": "2026-10-04T18:21+00:00",
-      "ok": 10,
-      "errores": 0,
-      "avisos_fallidos": 0,
-      "cambios": 0,
-      "detalle": [
-        {
-          "nombre": "Applications Manager",
-          "estado": "ok",
-          "mensaje": "182500"
-        },
-        {
-          "nombre": "OpManager 12.8",
-          "estado": "ok",
-          "mensaje": "12.8.712"
-        },
-        {
-          "nombre": "OpManager Complete 12.9",
-          "estado": "ok",
-          "mensaje": "12.9.148"
-        },
-        {
-          "nombre": "OpManager Nexus (FSO)",
-          "estado": "ok",
-          "mensaje": "12.8.711"
-        },
-        {
-          "nombre": "NetFlow Analyzer",
-          "estado": "ok",
-          "mensaje": "12.9.147"
-        },
-        {
-          "nombre": "Firewall Analyzer",
-          "estado": "ok",
-          "mensaje": "12.9.118"
-        },
-        {
-          "nombre": "Network Configuration Manager",
-          "estado": "ok",
-          "mensaje": "12.9.136"
-        },
-        {
-          "nombre": "OpUtils",
-          "estado": "ok",
-          "mensaje": "12.9.134"
-        },
-        {
-          "nombre": "DNS-DHCP-IPAM",
-          "estado": "ok",
-          "mensaje": "6500"
-        },
-        {
-          "nombre": "Site24x7",
-          "estado": "ok",
-          "mensaje": "September 29, 2026 | Third-Party Integrations Never miss a critical alert, now with the new HaloITSM integration Send mon"
-        }
-      ]
-    },
-    {
-      "fecha": "2026-10-03T18:18+00:00",
       "ok": 10,
       "errores": 0,
       "avisos_fallidos": 0,
